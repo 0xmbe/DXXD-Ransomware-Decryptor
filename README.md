@@ -1,8 +1,9 @@
 # DXXD Ransomware Decryptor
-Decryption algorithm that decrypts files crypted by DXXD Ransomware
+Decryption algorithm that decrypts files crypted by DXXD Ransomware that was spotted in 2016.
+It was a type of malware that encrypted files on your computer and demanded ransom to decrypt them.  
 
 ## Idea
-Idea was to create an algorithm that would decrypt files locked with known Ransomware that was spotted in 2016. It was a type of malware that encrypted files on your computer and demanded ransom to decrypt them.  
+Idea was to analyze how spcific ransomware crypted files  and what algoriths it used. 
 ## Build
 Use included makefile to build executable with gcc.
 ## Usage
@@ -39,7 +40,7 @@ File X:\\hotsites-decrypted.css written successfully!
 Press key to exit
 ```
 ## How encryption here works
-Generally we decrypt file by loading it as binary hex stream. By generating key stream the length of crypted file we assure that all bytes will be decrypted. Interesting thing is that first 8 bytes of crypted file are not encrypted. Firstly we rotate 3 bytes left and then xor with corresponding key.
+Generally we decrypt file by loading it as binary hex stream. By generating key stream the length of crypted file we assure that all bytes will be decrypted. Interesting thing is that first 4 bytes of crypted file are not encrypted. Firstly we rotate 3 bytes left and then xor with corresponding key.
 
 * Crypto algorithms used:
   * xor  -> Well known bitwise operation.
