@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <windows.h>
+#include <Windows.h>
 #include <sstream>
 #include <iosfwd>
 #include <iomanip>
@@ -14,7 +14,7 @@
 
 
 // Initial key
-static uint32_t KEY = 0xa7d46c76;
+const uint32_t KEY = 0xa7d46c76;
 
 /*
 * stdlib.h
@@ -183,14 +183,14 @@ int main(int argc, char** argv) {
 	std::vector<BYTE> decrypted_bytes = decrypt_DXXD_Ransomware(crypted_bytes);
 
 	// Print decrypted bytes hex string, only first x bytes
-	std::cout << "\ndecrypted_bytes hex (first 100):\n";
+	std::cout << "\ndecrypted_bytes hex (first 200):\n";
 	for (size_t i = 0; i < decrypted_bytes.size() && i < 200; ++i) {
 		std::cout << std::hex << std::setw(2) << std::setfill('0') << (int)decrypted_bytes[i];
 	}
 	std::cout << std::endl;
 
 	// Print decrypted bytes as characters, only first x bytes
-	std::cout << "\ndecrypted_bytes text (first 100):\n";
+	std::cout << "\ndecrypted_bytes text (first 200):\n";
 	for (size_t i = 0; i < decrypted_bytes.size() && i < 200; ++i) {
 		std::cout << decrypted_bytes[i];
 	}
