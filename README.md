@@ -1,12 +1,10 @@
-# DXXD-Ransomware-Decryptor
+# DXXD Ransomware Decryptor
 Decryption algorithm that decrypts files crypted by DXXD Ransomware
 
 ## Idea
 Idea was to create an algorithm that would decrypt files locked with known Ransomware that was spotted in 2016. It was a type of malware that encrypted files on your computer and demanded ransom to decrypt them.  
-
 ## Build
 Use included makefile to build executable with gcc.
-
 ## Usage
 Run with requested arguments. Destination file will be decrypted file.
 ```cmd
