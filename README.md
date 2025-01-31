@@ -3,7 +3,7 @@ Decryption algorithm that decrypts files crypted by DXXD Ransomware that was spo
 It was a type of malware that encrypted files on your computer and demanded ransom to decrypt them.  
 
 ## Idea
-Idea was to analyze how spcific ransomware crypted files and what algorithms were used. 
+Idea was to analyze how specific ransomware crypted files and what algorithms were used. 
 ## Build
 Use included makefile to build executable with gcc. Compatible also with msvc.
 ## Usage
